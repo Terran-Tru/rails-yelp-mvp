@@ -1,6 +1,12 @@
-<ul>
+<h1>Restaurantes</h1>
+
+<ul class="list-group mb-3">
   <% @restaurants.each do |restaurant| %>
-    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <%= link_to restaurant.name, restaurant_path(restaurant), class: "text-decoration-none" %>
+      <span class="badge bg-primary rounded-pill"><%= restaurant.category %></span>
+    </li>
   <% end %>
 </ul>
-<%= link_to "New Restaurant", new_restaurant_path %>
+
+<%= link_to "Nuevo Restaurante", new_restaurant_path, class: "btn btn-success" %>
