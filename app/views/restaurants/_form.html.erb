@@ -1,7 +1,9 @@
+<h2 class="mb-3 text - left ">Nuevo Restaurante</h2>
+
 <%= simple_form_for(restaurant) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :category, collection: Restaurant::CATEGORIES %>
   <%= f.input :phone_number %>
-  <%= f.submit %>
+  <%= f.button :submit, "Guardar", class: "btn btn-primary" %>
 <% end %>
