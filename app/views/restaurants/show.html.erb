@@ -4,13 +4,13 @@
 <p><%= @restaurant.phone_number %></p>
 <h3>Reviews:</h3>
 <% if @restaurant.reviews.any? %>
-  <ul>
+  <ol>
     <% @restaurant.reviews.each do |review| %>
       <li>
         Rating: <%= review.rating %> / Comentario: <%= review.content %>
       </li>
     <% end %>
-  </ul>
+  </ol>
 <% else %>
   <p>Aún no hay reviews para este restaurante.</p>
 <% end %>
