@@ -1,5 +1,5 @@
-<h1 class="text-left text-info fw-semibold mb-3">
-      Nueva Review
+<h1>
+  Nuestros Restaurantes
 </h1>
 
 <%= simple_form_for([@restaurant, @review]) do |f| %>
@@ -8,3 +8,4 @@
 <%= f.submit "Submit new" %>
 <% end %>
 
+<%= link_to "cancelar", restaurant_path(@restaurant), class:"btn btn-danger mt-3" %>
